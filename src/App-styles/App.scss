@@ -1,0 +1,15 @@
+@import './mixins.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+.App{
+    @include size(100vw, 100vh, 0, 0);
+    @include flex(center, center, column, NULL, NULL);
+    background: #221614;
+}
+
+//--------------Url Shortener--------------//
+
+//--------------Url Shortener--------------//

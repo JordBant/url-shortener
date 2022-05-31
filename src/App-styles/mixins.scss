@@ -1,0 +1,15 @@
+@mixin size($fillWidth-width, $fillHeight-height, $margin-margin, $padding-padding){
+    margin: $margin-margin;
+    padding: $padding-padding;
+    width: $fillWidth-width;
+    height: $fillHeight-height;
+}
+
+@mixin flex($justify-justify, $align-align, $direction-direction, $self-self_ju, $self-self_al){
+    display: flex;
+    justify-content: $justify-justify;
+    align-items: $align-align;
+    flex-direction: $direction-direction;
+    justify-self: $self-self_ju;
+    align-self: $self-self_al; 
+}
