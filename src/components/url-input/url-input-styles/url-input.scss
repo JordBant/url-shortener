@@ -1,1 +1,18 @@
+ @import '../../../App-styles/mixins.scss';
  
+ .shortener-wrapper{
+     @include size(1100px, 500px, 0, 0);
+     @include flex(center, center, column, NULL, NULL);
+    //  border: 2px solid blue;
+     
+     .input-field{
+        @include size(90%, 120px, 0, 30px 80px);
+        border-radius: 75px;
+        border: 10px solid rgba(255, 166, 0, 0.811);
+        background-color: transparent;
+        z-index: 100;
+        font-size: 40px;
+        color: white;
+        &:focus{outline: none;}
+     }
+ }

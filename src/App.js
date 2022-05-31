@@ -1,10 +1,12 @@
 import Particle from "./components/Particles";
 import './App-styles/App.css'
+import UrlInput from "./components/url-input/url-input-component";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Particle/>
+      <UrlInput/>
+      <Particle className = "particle-background" />
     </div>
   );
 }

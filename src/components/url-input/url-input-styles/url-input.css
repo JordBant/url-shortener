@@ -1,1 +1,40 @@
-/* No CSS *//*# sourceMappingURL=url-input.css.map */
+.shortener-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 1100px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: NULL;
+  -ms-flex-item-align: NULL;
+      align-self: NULL;
+}
+
+.shortener-wrapper .input-field {
+  margin: 0;
+  padding: 30px 80px;
+  width: 90%;
+  height: 120px;
+  border-radius: 75px;
+  border: 10px solid rgba(255, 166, 0, 0.811);
+  background-color: transparent;
+  z-index: 100;
+  font-size: 40px;
+  color: white;
+}
+
+.shortener-wrapper .input-field:focus {
+  outline: none;
+}
+/*# sourceMappingURL=url-input.css.map */
