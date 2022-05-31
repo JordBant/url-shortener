@@ -1,8 +1,8 @@
 .shortener-wrapper {
   margin: 0;
   padding: 0;
-  width: 1100px;
-  height: 500px;
+  width: 80%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,22 +19,126 @@
   justify-self: NULL;
   -ms-flex-item-align: NULL;
       align-self: NULL;
+  border: 2px solid blue;
 }
 
-.shortener-wrapper .input-field {
+.shortener-wrapper .input-field[type="search"]::-webkit-search-decoration,
+.shortener-wrapper .input-field[type="search"]::-webkit-search-cancel-button,
+.shortener-wrapper .input-field[type="search"]::-webkit-search-results-button,
+.shortener-wrapper .input-field[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.shortener-wrapper .input-container {
   margin: 0;
   padding: 30px 80px;
   width: 90%;
   height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: NULL;
+          flex-direction: NULL;
+  justify-self: NULL;
+  -ms-flex-item-align: NULL;
+      align-self: NULL;
+  justify-self: flex-start;
   border-radius: 75px;
   border: 10px solid rgba(255, 166, 0, 0.811);
-  background-color: transparent;
   z-index: 100;
+}
+
+.shortener-wrapper .input-container .input-field {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  height: auto;
+  border: none;
+  background-color: transparent;
   font-size: 40px;
+  caret-color: #ffa600;
   color: white;
 }
 
-.shortener-wrapper .input-field:focus {
+.shortener-wrapper .input-container .input-field:focus {
   outline: none;
+}
+
+.shortener-wrapper .input-container .close-button {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 50px;
+  display: inline-block;
+}
+
+.shortener-wrapper .input-container .close-button:before, .shortener-wrapper .input-container .close-button:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -25px;
+  display: block;
+  height: 10px;
+  width: 50px;
+  background-color: #fff;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.shortener-wrapper .input-container .close-button:after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.shortener-wrapper .shortened-url-div {
+  margin: 10px;
+  padding: 30px 80px;
+  width: 90%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: NULL;
+          flex-direction: NULL;
+  justify-self: NULL;
+  -ms-flex-item-align: NULL;
+      align-self: NULL;
+  border-radius: 75px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.833);
+}
+
+.shortener-wrapper .shortened-url-div .shortened-url {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  background: green;
+}
+
+.shortener-wrapper .shortened-url-div .copy-icon {
+  background: cyan;
 }
 /*# sourceMappingURL=url-input.css.map */

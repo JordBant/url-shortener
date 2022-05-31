@@ -1,13 +1,31 @@
- import React from 'react'
- import UrlShort from '../url-shortened/url-shortened-component'
- import './url-input-styles/url-input.css'
+import React from 'react'
+import './url-input-styles/url-input.css'
  
- function UrlInput() {
-   return (
-     <div className='shortener-wrapper'>
-        <input className='input-field' type="search" placeholder={`Enter the URL you'd like to shorten`}/>
-     </div>
-   )
- }
- 
- export default UrlInput
+const deleteInputText = () => {
+    
+}
+
+const UrlShort = () => {
+    return(
+        <div className="shortened-url-div">
+            <p className="shortened-url"> ShortenedURL.uihsdf</p>
+            <p className="copy-icon">Copy to Clipboard.</p>
+        </div>
+    )
+}
+
+const UrlInput = () => {
+    return (
+        <div className='shortener-wrapper'>
+            <div className="input-container">
+                <input className='input-field' type="search" placeholder={`Enter the URL you'd like to shorten`}/>
+                <div 
+                className="close-button"
+                onClick={ deleteInputText }/>
+            </div>
+            <UrlShort/>
+        </div>
+    )
+}
+
+export default UrlInput
