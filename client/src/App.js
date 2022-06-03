@@ -1,6 +1,6 @@
 import Particle from "./components/Particles";
 import './App-styles/App.css'
-import UrlInput from "./components/url-input/url-input-component";
+import UrlInput from "./components/url-section/url-input-component";
 
 const App = () => {
   return (
