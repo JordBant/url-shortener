@@ -1,9 +1,5 @@
-import React from 'react'
 import './url-input-styles/url-input.css'
- 
-const deleteInputText = () => {
-    
-}
+// import { React, useState } from "react";
 
 const UrlShort = () => {
     return(
@@ -15,13 +11,12 @@ const UrlShort = () => {
 }
 
 const UrlInput = () => {
+
+
     return (
         <div className='shortener-wrapper'>
             <div className="input-container">
-                <input className='input-field' type="search" placeholder={`Enter the URL you'd like to shorten`}/>
-                <div 
-                className="close-button"
-                onClick={ deleteInputText }/>
+                <input className='input-field' type="search" placeholder={`Enter the URL you'd like to shorten.`}/>
             </div>
             <UrlShort/>
         </div>
