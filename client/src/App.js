@@ -1,12 +1,11 @@
-import Particle from "./components/Particles";
 import './App-styles/App.css'
-import UrlInput from "./components/url-section/url-input-component";
+// import EntryPage from './components/routes/entry-page/entry-page-component';
+import UserAuthPage from './components/routes/user-auth-page/user-auth-page-component';
 
 const App = () => {
   return (
     <div className="App">
-      <UrlInput/>
-      <Particle className = "particle-background" />
+      <UserAuthPage/>
     </div>
   );
 }
