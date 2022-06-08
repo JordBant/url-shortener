@@ -1,20 +1,41 @@
 @import '../../../../App-styles/mixins.scss';
 
 .userAuth{
-    @include size(100%, 100vh, 0, 0);
-    @include flex(center, center, null, null, null);
+    @include size(100%, 100vh, 75px 0 0 0, 75px);
     flex: 1 1 0px;
-    // border: 2px solid red;
+    background: #221614;
 
-    .sign-up{
-        @include size(100%, 100vh, 0, 30px);
+    .form-wrapper{
+        @include size(100%, 100%, 0, 20px);
         @include flex(center, center, null, null, null);
-        border: 8px solid green;
-    }
+        border: 2px solid rgba(255, 149, 0, 0.811);
+        border-radius: 200px;
 
-    .login{
-        @include size(100%, 100vh, 0, 30px);
-        @include flex(center, center, null, null, null);
-        border: 8px solid blue;
+        .sign-up{
+            @include size(600px, 90%, 0, 30px);
+            @include flex(center, center, null, null, null);
+            color: rgb(252, 251, 248);
+            border: 8px solid green;
+    
+            .sign-up-form{
+                @include size(59%, 80%, 0, 30px);
+                @include flex(center, center, column, null, null);
+                background: #221614;
+                border-radius: 25px;
+            }
+        }
+    
+        .login{
+            @include size(600px, 90%, 0, 30px);
+            @include flex(center, center, null, null, null);
+            border: 8px solid blue;
+    
+            .login-form{
+                @include size(59%, 80%, 0, 30px);
+                @include flex(center, center, column, null, null);
+                background: #221614;
+                border-radius: 25px;
+            }
+        }
     }
 }

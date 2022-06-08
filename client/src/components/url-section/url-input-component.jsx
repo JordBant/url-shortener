@@ -1,6 +1,6 @@
 import './url-section-styles/url-section.css'
 // import UrlDisplay from './display-short-component'
-import SubmitBtn from '../submit-btn-component';
+import SubmitUrl from '../submit-url-btn-component';
 import { React, useState } from "react";
 
 const UrlInput = () => {
@@ -11,8 +11,8 @@ const UrlInput = () => {
     return (
         <div className='shortener-wrapper'>
             <div className="input-container">
-                <SubmitBtn inputValue = { text } />
-                <input className='input-field' onChange = {observeInput} type="search" placeholder={`Enter the URL you'd like to shorten.`}/>
+                <SubmitUrl inputValue= { text }/>
+                <input className='input-field' onChange={ observeInput } type="search" placeholder={`Enter the URL you'd like to shorten.`}/>
             </div>
         </div>
     )

@@ -80,6 +80,7 @@
   caret-color: #ff9500;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  text-align: center;
   color: #ff9500;
 }
 

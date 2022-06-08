@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "user-auth-styles.scss"
+        "login-styles.scss"
     ],
     "names": [],
-    "file": "user-auth-styles.css"
+    "file": "login-styles.css"
 }

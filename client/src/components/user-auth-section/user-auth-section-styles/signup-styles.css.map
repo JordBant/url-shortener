@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "entry-page-styles.scss"
+        "signup-styles.scss"
     ],
     "names": [],
-    "file": "entry-page-styles.css"
+    "file": "signup-styles.css"
 }

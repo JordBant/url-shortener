@@ -1,24 +1,27 @@
 import './url-section/url-section-styles/url-section.css'
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect } from 'react'
 
-const SubmitBtn = ({ inputValue }) => { 
-    // const [shortUrl, setShortUrl] = useState('')
-
+const SubmitUrl = ({ inputValue }) => { 
+    
     useEffect(() => {
         const getShort = async () => {
             try {
                 const response = await fetch('/shortener', {
 
                     method: 'POST',
-                    headers: {"Content-Type" : "application/json"},
+                    headers: { "Content-Type" : "application/json" },
                     body: JSON.stringify(inputValue)
                 })
-                const data = await response.json()
+                const shortenedUrl = await response.json()
+                console.log(shortenedUrl)
 
             } catch (error) {
-                // setShortUrl('Provide valid URL')
+                console.log(error)
             }
         } 
+
+        getShort()
+
     }, [inputValue])
     
 
@@ -26,11 +29,11 @@ const SubmitBtn = ({ inputValue }) => {
         <Fragment>
         {
             (inputValue.length) 
-            ? <button className= 'submit-btn' />
+            ? <button className = 'submit-btn' />
             : null
         }
         </Fragment>
     )
 }
 
-export default SubmitBtn
+export default SubmitUrl

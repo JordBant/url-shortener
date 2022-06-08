@@ -1,9 +1,13 @@
 {
   "name": "server",
+  "proxy": "http://localhost:3001",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,14 +1,16 @@
 const axios = require('axios')
 const nanoid = require('nanoid')
+const PORT = 3001 || process.env.PORT
+// const mongo = require('mongoose')
+
 const express = require('express')
 const app = express()
-const PORT = 3000 || process.env.PORT
+app.use(express.json());
 
-
-app.post('/shorten', (req, res) => {
-    const url = req.body.url
-
-    res.json(newURL)
+app.post('/shortener', (req, res) => {
+    const url = req.body.inputValue
+    console.log('Got Url:', url)
+    res.json(url)
 })
 
 app.listen(PORT)
