@@ -1,0 +1,23 @@
+.submit-form-btn {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  height: 50px;
+  border-radius: 75px;
+  background: #221614;
+  color: white;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 20px;
+  -webkit-transition: 0.12s all ease-in-out;
+  transition: 0.12s all ease-in-out;
+  z-index: 101;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-form-btn:hover {
+  border: 4px solid #221614;
+  color: #221614;
+  background: blanchedalmond;
+}
+/*# sourceMappingURL=submit-form.css.map */

@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json());
 
 app.post('/shortener', (req, res) => {
-    const url = req.body.inputValue
+    const url = req.body.value
     console.log('Got Url:', url)
     res.json(url)
 })

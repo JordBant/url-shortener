@@ -15,9 +15,3 @@
     @include flex(center, center, column, NULL, NULL);
     background: #221614;
 }
-
-.user-auth-page{
-    @include size(100vw, 100vh, 0, 0);
-    @include flex(center, center, column, NULL, NULL);
-    background: blanchedalmond;
-}

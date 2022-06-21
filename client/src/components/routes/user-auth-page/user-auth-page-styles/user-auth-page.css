@@ -1,17 +1,31 @@
-.userAuth {
-  margin: 75px 0 0 0;
+.user-auth {
+  margin: 0;
   padding: 75px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0px;
-  background: #221614;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: NULL;
+  -ms-flex-item-align: NULL;
+      align-self: NULL;
+  z-index: 101;
+  background: blanchedalmond;
 }
 
-.userAuth .form-wrapper {
+.user-auth .form-wrapper {
   margin: 0;
-  padding: 20px;
+  padding: 0;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -24,10 +38,18 @@
       -ms-flex-align: center;
           align-items: center;
   border: 2px solid rgba(255, 149, 0, 0.811);
-  border-radius: 200px;
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
+  background: none;
+  border-radius: 75px;
+  overflow: hidden;
 }
 
-.userAuth .form-wrapper .sign-up {
+.user-auth .form-wrapper .form-title {
+  color: #221614;
+}
+
+.user-auth .form-wrapper .sign-up {
   margin: 0;
   padding: 30px;
   width: 600px;
@@ -41,11 +63,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fcfbf8;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #221614;
   border: 8px solid green;
 }
 
-.userAuth .form-wrapper .sign-up .sign-up-form {
+.user-auth .form-wrapper .sign-up .sign-up-form {
   margin: 0;
   padding: 30px;
   width: 59%;
@@ -63,11 +89,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #221614;
-  border-radius: 25px;
 }
 
-.userAuth .form-wrapper .login {
+.user-auth .form-wrapper .login {
   margin: 0;
   padding: 30px;
   width: 600px;
@@ -84,7 +108,7 @@
   border: 8px solid blue;
 }
 
-.userAuth .form-wrapper .login .login-form {
+.user-auth .form-wrapper .login .login-form {
   margin: 0;
   padding: 30px;
   width: 59%;
@@ -102,7 +126,5 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #221614;
-  border-radius: 25px;
 }
 /*# sourceMappingURL=user-auth-page.css.map */

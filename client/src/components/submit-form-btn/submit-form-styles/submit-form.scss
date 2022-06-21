@@ -1,0 +1,20 @@
+@import '../../../App-styles/mixins.scss';
+
+.submit-form-btn{
+    @include size(60%, 50px, 0, 0);
+    border-radius: 75px;
+    background: #221614;
+    color:white;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 20px;
+    transition: 0.12s all ease-in-out;
+    z-index: 101;
+    border: none;
+    cursor: pointer;
+
+    &:hover{
+        border: 4px solid #221614;
+        color: #221614;
+        background: blanchedalmond;
+    }
+}
