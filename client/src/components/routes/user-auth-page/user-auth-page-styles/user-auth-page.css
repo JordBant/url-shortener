@@ -37,7 +37,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid rgba(255, 149, 0, 0.811);
+  border: 2px solid #ff9500cf;
   -webkit-transition: 0.1s all ease-in-out;
   transition: 0.1s all ease-in-out;
   background: none;

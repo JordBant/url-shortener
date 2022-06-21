@@ -55,6 +55,9 @@
             }
         }
     }
+    .input-container.unAuthorized{
+        animation: yourAnimation 0.3s ease 0s normal none;
+    }
 
         .shortened-url-div{
         @include size(90%, 40px, 10px, 30px 80px);
@@ -81,5 +84,26 @@
     to{
         transform: rotate(180deg);
         opacity: 1;
+    }
+}
+
+@keyframes yourAnimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    12%{
+        transform: rotate(-1deg);
+    }
+    25%{
+        transform: rotate(-2deg);
+    }
+    50%{
+        transform: rotate(2deg);
+    }
+    75%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(0deg);
     }
 }

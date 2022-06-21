@@ -100,6 +100,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+.shortener-wrapper .input-container.unAuthorized {
+  -webkit-animation: yourAnimation 0.3s ease 0s normal none;
+          animation: yourAnimation 0.3s ease 0s normal none;
+}
+
 .shortener-wrapper .shortened-url-div {
   margin: 10px;
   padding: 30px 80px;
@@ -161,6 +166,60 @@
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes yourAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  12% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  25% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  75% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes yourAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  12% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  25% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  75% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 /*# sourceMappingURL=url-section.css.map */

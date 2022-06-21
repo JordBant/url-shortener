@@ -6,12 +6,15 @@ import { React, useState } from "react";
 const UrlInput = () => {
 
     const [text, setText] = useState('')
+    const [unAuth, setUnAuth] = useState(false)
+    
     const handleInput = (event) => setText(event.target.value)
-
+    
+    const unAuthorized = text ? 'unAuthorized' : ''
    
     return (
         <div className='shortener-wrapper'>
-            <div className="input-container">
+            <div className={`input-container ${unAuthorized} `}>
                 <SubmitUrl inputValue = { text } />
                 <input 
                 onChange= { handleInput }
