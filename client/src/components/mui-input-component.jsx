@@ -2,7 +2,7 @@ import './mui-input-component'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-const InputMUI = () => {
+const InputMUI = ({label, variant, type, required}) => {
   return (
     <Box
     component="form"
@@ -19,7 +19,10 @@ const InputMUI = () => {
     noValidate
     autoComplete="off"
   >
-    <TextField id="filled-basic" label="Filled" variant="filled" />
+    <TextField
+    type = {type} 
+    label = {label} 
+    variant = 'filled' />
   </Box>
   )
 }

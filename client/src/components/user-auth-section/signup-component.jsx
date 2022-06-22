@@ -9,7 +9,12 @@ function SignUp() {
       <div className="sign-up">
         <div className="sign-up-form">
           <h1 className="form-title">Sign Up</h1>
-            <InputMUI/>
+            <InputMUI label = 'First Name'/>
+            <InputMUI label = 'Last Name' />
+            <InputMUI type = 'email' label = 'Email' />
+            <InputMUI label = 'Username' />
+            <InputMUI type = 'password' label = 'Password' />
+            <InputMUI type = 'password' label = 'Confirm Password' />
           </div>
           <SubmitFormBtn buttonName = 'Sign Up' />
         </div>

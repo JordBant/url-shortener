@@ -3,44 +3,65 @@
 .user-auth{
     @include size(100vw, 100vh, 0, 75px);
     @include flex(center, center, column, NULL, NULL);
-    z-index: 101;
     background: blanchedalmond;
 
     .form-wrapper{
-        @include size(100%, 100%, 0, 0);
+        @include size(100%, 90%, 0, 0);
         @include flex(center, center, null, null, null);
-        border: 2px solid #ff9500cf;
         transition: 0.1s all ease-in-out;
-        // background: linear-gradient(to top left, #d06202, #633401,#0f0700, #010101);
-        background: none;
         border-radius: 75px;
         overflow: hidden;
 
         .form-title{
             color: #221614;
+        }
 
+        .form-trigger{
+            @include size(375px, 195px, 0, 0);
+            font-size: 4rem;
+            font-family: 'Libre Baskerville', sans-serif;
+            background-color: #ff9500;
+            color: #221614;
+            z-index: 1000;
+            border: none;
+            transition: 0.2s all ease-in-out;
+            position: relative;
+            cursor: pointer;
+            
+            &:hover{
+                transform: translate(-5px, -5px);
+            }
+        }
+        .form-trigger::after{
+            content: '';
+            @include size(375px, 195px, 0, 0);
+            inset: 0 0 0 0;
+            position: absolute;
+            background-color: white;
         }
 
         .sign-up{
-            @include size(600px, 90%, 0, 30px);
+            @include size(50%, 90%, 0, 30px);
             @include flex(center, center, column, null, null);
-            color: #221614;
-            border: 8px solid green;
             .sign-up-form{
-                @include size(59%, 80%, 0, 30px);
+                @include size(59%, auto, 0, 20px 0);
                 @include flex(center, center, column, null, null);
             }
         }
     
         .login{
-            @include size(600px, 90%, 0, 30px);
-            @include flex(center, center, null, null, null);
-            border: 8px solid blue;
-    
+            @include size(50%, 90%, 0, 30px);
+            @include flex(center, center, column, null, null);
             .login-form{
-                @include size(59%, 80%, 0, 30px);
+                @include size(59%, auto, 0, 20px 0);
                 @include flex(center, center, column, null, null);
             }
+        }
+
+        .divider{
+            @include size(5px, 100%, 5px, 0);
+            background-color: #221614;
+            border-radius: 100px;
         }
     }
 }

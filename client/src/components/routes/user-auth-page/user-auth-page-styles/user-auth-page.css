@@ -19,7 +19,6 @@
   justify-self: NULL;
   -ms-flex-item-align: NULL;
       align-self: NULL;
-  z-index: 101;
   background: blanchedalmond;
 }
 
@@ -27,7 +26,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,10 +36,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #ff9500cf;
   -webkit-transition: 0.1s all ease-in-out;
   transition: 0.1s all ease-in-out;
-  background: none;
   border-radius: 75px;
   overflow: hidden;
 }
@@ -49,10 +46,43 @@
   color: #221614;
 }
 
+.user-auth .form-wrapper .form-trigger {
+  margin: 0;
+  padding: 0;
+  width: 375px;
+  height: 195px;
+  font-size: 4rem;
+  font-family: 'Libre Baskerville', sans-serif;
+  background-color: #ff9500;
+  color: #221614;
+  z-index: 1000;
+  border: none;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+.user-auth .form-wrapper .form-trigger:hover {
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
+}
+
+.user-auth .form-wrapper .form-trigger::after {
+  content: '';
+  margin: 0;
+  padding: 0;
+  width: 375px;
+  height: 195px;
+  inset: 0 0 0 0;
+  position: absolute;
+  background-color: white;
+}
+
 .user-auth .form-wrapper .sign-up {
   margin: 0;
   padding: 30px;
-  width: 600px;
+  width: 50%;
   height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,15 +97,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #221614;
-  border: 8px solid green;
 }
 
 .user-auth .form-wrapper .sign-up .sign-up-form {
   margin: 0;
-  padding: 30px;
+  padding: 20px 0;
   width: 59%;
-  height: 80%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,25 +122,8 @@
 .user-auth .form-wrapper .login {
   margin: 0;
   padding: 30px;
-  width: 600px;
+  width: 50%;
   height: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 8px solid blue;
-}
-
-.user-auth .form-wrapper .login .login-form {
-  margin: 0;
-  padding: 30px;
-  width: 59%;
-  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,5 +137,34 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.user-auth .form-wrapper .login .login-form {
+  margin: 0;
+  padding: 20px 0;
+  width: 59%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.user-auth .form-wrapper .divider {
+  margin: 5px;
+  padding: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #221614;
+  border-radius: 100px;
 }
 /*# sourceMappingURL=user-auth-page.css.map */
