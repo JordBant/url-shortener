@@ -24,22 +24,17 @@
             color: #221614;
             z-index: 1000;
             border: none;
-            transition: 0.2s all ease-in-out;
-            position: relative;
-            cursor: pointer;
+            transition: 0.17s all ease-in-out;
+            border-radius: 10px;
             
+            cursor: pointer;
+
             &:hover{
-                transform: translate(-5px, -5px);
+                transform: translate(-2.5px, -2.5px);
+                box-shadow: 5px 5px 0 2px white, 12.5px 12.5px 0 3px #221614
             }
         }
-        .form-trigger::after{
-            content: '';
-            @include size(375px, 195px, 0, 0);
-            inset: 0 0 0 0;
-            position: absolute;
-            background-color: white;
-        }
-
+        
         .sign-up{
             @include size(50%, 90%, 0, 30px);
             @include flex(center, center, column, null, null);

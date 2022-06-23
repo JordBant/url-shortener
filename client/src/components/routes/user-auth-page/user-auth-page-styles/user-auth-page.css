@@ -57,26 +57,17 @@
   color: #221614;
   z-index: 1000;
   border: none;
-  -webkit-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
-  position: relative;
+  -webkit-transition: 0.17s all ease-in-out;
+  transition: 0.17s all ease-in-out;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .user-auth .form-wrapper .form-trigger:hover {
-  -webkit-transform: translate(-5px, -5px);
-          transform: translate(-5px, -5px);
-}
-
-.user-auth .form-wrapper .form-trigger::after {
-  content: '';
-  margin: 0;
-  padding: 0;
-  width: 375px;
-  height: 195px;
-  inset: 0 0 0 0;
-  position: absolute;
-  background-color: white;
+  -webkit-transform: translate(-2.5px, -2.5px);
+          transform: translate(-2.5px, -2.5px);
+  -webkit-box-shadow: 5px 5px 0 2px white, 12.5px 12.5px 0 3px #221614;
+          box-shadow: 5px 5px 0 2px white, 12.5px 12.5px 0 3px #221614;
 }
 
 .user-auth .form-wrapper .sign-up {
