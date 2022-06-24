@@ -1,9 +1,11 @@
-import React from 'react'
+import {React, useState} from 'react'
 
-const FormTrigger = ({title}) => {
+const FormType = ({title}) => {
+    const [form, setForm] = useState(false)
+    
   return (
-    <button className='form-trigger' >{title}</button>
-  )
+      <div className='form-trigger' >{title}</div>
+      )
 }
 
-export default FormTrigger
+export default FormType

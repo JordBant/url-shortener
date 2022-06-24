@@ -46,31 +46,54 @@
   color: #221614;
 }
 
-.user-auth .form-wrapper .form-trigger {
-  margin: 0;
-  padding: 0;
+.user-auth .form-wrapper .sign-up {
+  margin: auto;
+  padding: 10px;
   width: 375px;
   height: 195px;
-  font-size: 4rem;
-  font-family: 'Libre Baskerville', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #ff9500;
   color: #221614;
   z-index: 1000;
   border: none;
-  -webkit-transition: 0.17s all ease-in-out;
-  transition: 0.17s all ease-in-out;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.user-auth .form-wrapper .form-trigger:hover {
+.user-auth .form-wrapper .sign-up .form-title {
+  font-size: 2rem;
+  font-family: 'Libre Baskerville', sans-serif;
+}
+
+.user-auth .form-wrapper .sign-up .text-field, .user-auth .form-wrapper .sign-up .submit-form-btn {
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  display: none;
+  opacity: 0;
+}
+
+.user-auth .form-wrapper .sign-up:hover {
   -webkit-transform: translate(-2.5px, -2.5px);
           transform: translate(-2.5px, -2.5px);
   -webkit-box-shadow: 5px 5px 0 2px white, 12.5px 12.5px 0 3px #221614;
           box-shadow: 5px 5px 0 2px white, 12.5px 12.5px 0 3px #221614;
 }
 
-.user-auth .form-wrapper .sign-up {
+.user-auth .form-wrapper .sign-up.active {
   margin: 0;
   padding: 30px;
   width: 50%;
@@ -88,9 +111,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: none;
+          transform: none;
+  background-color: transparent;
+  cursor: default;
 }
 
-.user-auth .form-wrapper .sign-up .sign-up-form {
+.user-auth .form-wrapper .sign-up.active .text-field, .user-auth .form-wrapper .sign-up.active .submit-form-btn {
+  display: inline;
+  opacity: 1;
+}
+
+.user-auth .form-wrapper .sign-up.active .sign-up-form {
   margin: 0;
   padding: 20px 0;
   width: 59%;

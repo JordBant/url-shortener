@@ -22,6 +22,7 @@ const InputMUI = ({label, variant, type, required}) => {
     <TextField
     type = {type} 
     label = {label} 
+    className='text-field'
     variant = 'filled' />
   </Box>
   )

@@ -16,18 +16,28 @@
             color: #221614;
         }
 
-        .form-trigger{
-            @include size(375px, 195px, 0, 0);
-            font-size: 4rem;
-            font-family: 'Libre Baskerville', sans-serif;
+        .sign-up{
+            @include size(375px, 195px, auto, 10px);
+            @include flex(center, center, column, null, null);
+
             background-color: #ff9500;
             color: #221614;
             z-index: 1000;
             border: none;
-            transition: 0.17s all ease-in-out;
+            transition: 0.4s all ease-in-out;
             border-radius: 10px;
-            
             cursor: pointer;
+
+            .form-title{
+                font-size: 2rem;
+                font-family: 'Libre Baskerville', sans-serif;
+            }
+
+            .text-field, .submit-form-btn{
+                transition: 0.5s all ease-in-out;
+                display: none;
+                opacity: 0;
+            }
 
             &:hover{
                 transform: translate(-2.5px, -2.5px);
@@ -35,9 +45,19 @@
             }
         }
         
-        .sign-up{
+        .sign-up.active{
             @include size(50%, 90%, 0, 30px);
             @include flex(center, center, column, null, null);
+            box-shadow: none;
+            transform: none;
+            background-color: transparent;
+            cursor: default;
+
+            .text-field, .submit-form-btn{
+                display: inline;
+                opacity: 1;
+            }
+
             .sign-up-form{
                 @include size(59%, auto, 0, 20px 0);
                 @include flex(center, center, column, null, null);
