@@ -46,7 +46,7 @@ const UserAuthPage = () => {
           active = {activeLogin} 
           formType = 'Login' 
           activateForm = { activateForm } 
-          title = 'Log In' 
+          title = 'Log In'
         />
       </div>
     </div>
