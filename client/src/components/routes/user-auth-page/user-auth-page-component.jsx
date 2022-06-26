@@ -11,24 +11,19 @@ const UserAuthPage = () => {
       case 'Login':
         setActiveCreate(false)
         setActiveLogin(true)
-        console.log(activeFormType + 'should be Login')
+        console.log('l')
         break;
 
       case 'Create':
         setActiveCreate(true)
         setActiveLogin(false)
-        console.log(activeFormType + 'should be Create')
+        console.log('c')
         break;
     
       default:
         break;
     }
   }
-
-  /**
-   * On click, the child comp will send its prop into the 
-   * activate form function in its parent.
-   */
 
   return (
     <div className="user-auth">

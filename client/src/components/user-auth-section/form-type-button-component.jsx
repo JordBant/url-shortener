@@ -3,16 +3,15 @@ import Login from './login-component'
 
 const FormType = ({active, title, formType, activateForm}) => {
   const isActive =  active ? 'active' : '' ;
-  const mountForm = (formType) => {
+
+  const formToRender = () => {
+    // eslint-disable-next-line default-case
     switch (formType) {
       case 'Create':
         <SignUp/>
         break;
       case 'Login':
         <Login/>
-        break;
-    
-      default:
         break;
     }
   }
@@ -22,14 +21,11 @@ const FormType = ({active, title, formType, activateForm}) => {
         className= {`form-container ${isActive}`} 
         onClick={() => activateForm(formType)}
       >
-    
-      <SignUp/>
-        {
-          active
-          ? mountForm(formType)
-          : title
-  
-        }
+      {
+        active 
+        ? <SignUp/>
+        : title
+      }
       </div>
       )
 }

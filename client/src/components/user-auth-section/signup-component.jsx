@@ -13,8 +13,8 @@ const SignUp = () => {
           <InputMUI label = 'Username' />
           <InputMUI label = 'Password' type = 'password' />
           <InputMUI label = 'Confirm Password' type = 'password' />
+          <SubmitFormBtn buttonName = 'Sign Up' />
         </div>
-        <SubmitFormBtn buttonName = 'Sign Up' />
       </Fragment>
   )
 }

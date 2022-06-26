@@ -12,10 +12,6 @@
         border-radius: 75px;
         // border: 2px solid black;
 
-        .form-title{
-            color: #221614;
-        }
-
         .form-container{
             @include size(375px, 195px, auto, 10px);
             @include flex(center, center, NULL, null, null);
@@ -39,9 +35,21 @@
         .form-container.active{
             @include size(50%, 90%, 0, 30px);
             @include flex(center, center, column, null, null);
+            cursor: default;
+
             .form{
-                @include size(59%, auto, 0, 20px 0);
+                @include size(82.5%, auto, 0, 50px);
                 @include flex(center, center, column, null, null);
+                border: 4px solid #221614;
+                border-radius: 15px;
+                .form-title{
+                    font-size: 3rem;
+                    color: #221614;
+                }
+                & > * {
+                // border: 2px solid blue;
+                    width: 100%;
+                }
             }
             &:hover{
                 background-color: transparent;
