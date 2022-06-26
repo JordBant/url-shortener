@@ -1,6 +1,4 @@
 import {React, useState} from 'react'
-import SignUp from '../../user-auth-section/signup-component'
-import Login from '../../user-auth-section/login-component'
 import FormType from '../../user-auth-section/form-type-button-component'
 import './user-auth-page-styles/user-auth-page.css'
 
@@ -10,13 +8,13 @@ const UserAuthPage = () => {
 
   const activateForm = (activeFormType) => {
     switch (activeFormType) {
-      case 'Login ':
+      case 'Login':
         setActiveCreate(false)
         setActiveLogin(true)
         console.log(activeFormType + 'should be Login')
         break;
 
-      case 'Create ':
+      case 'Create':
         setActiveCreate(true)
         setActiveLogin(false)
         console.log(activeFormType + 'should be Create')
@@ -36,14 +34,14 @@ const UserAuthPage = () => {
     <div className="user-auth">
       <div className="form-wrapper">
         <FormType
-          active = {activeCreate} 
+          active = { activeCreate } 
           formType = 'Create' 
           activateForm = { activateForm } 
           title = 'Create Account'
         />
 
         <FormType 
-          active = {activeLogin} 
+          active = { activeLogin } 
           formType = 'Login' 
           activateForm = { activateForm } 
           title = 'Log In'
