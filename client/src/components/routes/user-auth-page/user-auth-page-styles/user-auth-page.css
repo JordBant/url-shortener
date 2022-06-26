@@ -1,6 +1,6 @@
 .user-auth {
   margin: 0;
-  padding: 75px;
+  padding: 25px 75px;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -39,7 +39,6 @@
   -webkit-transition: 0.1s all ease-in-out;
   transition: 0.1s all ease-in-out;
   border-radius: 75px;
-  overflow: hidden;
 }
 
 .user-auth .form-wrapper .form-title {
@@ -123,44 +122,12 @@
           flex-direction: column;
 }
 
-.user-auth .form-wrapper .login {
-  margin: 0;
-  padding: 30px;
-  width: 50%;
-  height: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.user-auth .form-wrapper .login .login-form {
-  margin: 0;
-  padding: 20px 0;
-  width: 59%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.user-auth .form-wrapper .form-container.active:hover {
+  background-color: transparent;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .user-auth .form-wrapper .divider {
