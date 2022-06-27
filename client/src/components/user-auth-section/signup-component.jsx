@@ -5,32 +5,81 @@ import SubmitFormBtn from '../submit-form-btn/submit-form-button'
 const SignUp = () => {
   //For Form Validation 
 
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [userName, setUserName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirm, setConfirm] = useState(['', undefined])
+  const [firstName, setFirstName] = useState(['', null])
+  const [lastName, setLastName] = useState(['', null])
+  const [userName, setUserName] = useState(['', null])
+  const [email, setEmail] = useState(['', null])
+  const [password, setPassword] = useState(['', null])
+  const [confirm, setConfirm] = useState(['', null])
 
-  // const candidate = {
-  //   firstName,
-  //   lastName,
-  //   userName,
-  //   email,
-  //   password,
-  //   confirm
-  // }
+  const updateArrState = (stateArr, event) => {
+    const cloneArr = [event.target.value, stateArr[1]]
+    return cloneArr
+  }
+  const candidate = {
+    firstName,
+    lastName,
+    userName,
+    email,
+    password,
+    confirm
+  }
+
+  const logic = (event) => console.log(event)
 
   return (
       <Fragment>
         <form className="form">
           <h1 className="form-title">Sign Up</h1>
-          <InputMUI onChange = { (event) => setFirstName(event.target.value)} value = {firstName} label = 'First Name'/>
-          <InputMUI onChange = { (event) => setLastName(event.target.value)} value = {lastName} label = 'Last Name' />
-          <InputMUI onChange = { (event) => setEmail(event.target.value)} value = {email} label = 'Email' type = 'email' />
-          <InputMUI onChange = { (event) => setUserName(event.target.value)} value = {userName} label = 'Username' />
-          <InputMUI onChange = { (event) => setPassword(event.target.value)} value = {password} label = 'Password' type = 'password' />
-          <InputMUI onChange = { (event) => setConfirm(event.target.value)} value = {confirm} label = 'Confirm Password' type = 'password' />
+          <InputMUI 
+          value = {firstName} 
+          label = 'First Name'
+          handleChange = {logic} 
+          />
+
+          <InputMUI 
+          value = {lastName} 
+          label = 'Last Name' 
+          onChange = { () => {
+            setLastName(updateArrState(lastName))} 
+          }
+          />
+
+          <InputMUI 
+          value = {email} 
+          label = 'Email' 
+          type = 'email' 
+          onChange = { () => {
+            setEmail(updateArrState(email))} 
+          }
+          />
+
+          <InputMUI 
+          value = {userName} 
+          label = 'Username' 
+          onChange = { () => {
+            setUserName(updateArrState(userName))} 
+          }
+          />
+
+          <InputMUI 
+          value = {password} 
+          label = 'Password' 
+          type = 'password' 
+          onChange = { () => {
+            setPassword(updateArrState(password))} 
+          }
+          />
+
+          <InputMUI 
+          value = {confirm} 
+          label = 'Confirm Password' 
+          type = 'password' 
+          onChange = { () => {
+            setConfirm(updateArrState(confirm))} 
+          }
+          />
+
           <SubmitFormBtn buttonName = 'Sign Up' />
         </form>
       </Fragment>
@@ -42,8 +91,6 @@ const SignUp = () => {
  * Form will send SubmitBtn a constructed newUser to validate.
  * If SubmitBtn detects any input that is invalid, it will trigger a state change
  * in parent.
- * 
- * 
  * 
  */
 

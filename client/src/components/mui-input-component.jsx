@@ -2,7 +2,7 @@ import './mui-input-component'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-const InputMUI = ({label, variant, type, required}) => {
+const InputMUI = ({label, type, handleChange}) => {
   return (
     <Box
     component="form"
@@ -22,6 +22,7 @@ const InputMUI = ({label, variant, type, required}) => {
     <TextField
     type = {type} 
     label = {label} 
+    onChange = {() => handleChange()}
     className='text-field'
     variant = 'filled' />
   </Box>
