@@ -1,5 +1,6 @@
 import SignUp from './signup-component' 
 import Login from './login-component' 
+import { useTransition } from 'react-spring';
 
 const FormType = ({active, title, formType, activateForm}) => {
   const isActive =  active ? 'active' : '' ;
