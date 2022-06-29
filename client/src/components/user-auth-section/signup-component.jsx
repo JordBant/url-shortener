@@ -5,7 +5,7 @@ import SubmitFormBtn from '../submit-form-btn/submit-form-button'
 const SignUp = () => {
   //For Form Validation 
 
-  const [firstName, setFirstName] = useState(['', null])
+  const [firstName, setFirstName] = useState(['iu', null])
   const [lastName, setLastName] = useState(['', null])
   const [userName, setUserName] = useState(['', null])
   const [email, setEmail] = useState(['', null])
@@ -13,28 +13,33 @@ const SignUp = () => {
   const [confirm, setConfirm] = useState(['', null])
 
   const updateArrState = (stateArr, event) => {
-    const cloneArr = [event.target.value, stateArr[1]]
-    return cloneArr
-  }
-  const candidate = {
-    firstName,
-    lastName,
-    userName,
-    email,
-    password,
-    confirm
+    const clonedArr = [event.target.value, stateArr[1]]
+    console.log(`Here: ${clonedArr}`)
+    return clonedArr
   }
 
-  const logic = (event) => console.log(event)
+  const isStill = firstName !== 'iu' ? true : false
+  const notify = state => isStill && console.log(`new state ${state} `)
+  notify(firstName)
+
+  // const candidate = {
+  //   firstName,
+  //   lastName,
+  //   userName,
+  //   email,
+  //   password,
+  //   confirm
+  // }
 
   return (
       <Fragment>
         <form className="form">
           <h1 className="form-title">Sign Up</h1>
           <InputMUI 
-          value = {firstName} 
+          stateValue = { firstName }
           label = 'First Name'
-          handleChange = {logic} 
+          handleChange = { updateArrState } 
+          updateParentState = { setFirstName }
           />
 
           <InputMUI 

@@ -1,5 +1,5 @@
 import Particle from '../../Particles'
-import '../../../App-styles/App.css'
+import './entry-page-styles/entry-page.css'
 import UrlInput from '../../url-section/url-input-component'
 import { useState } from "react";
 
