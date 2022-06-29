@@ -3,7 +3,7 @@
     "mappings": "AAEA,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,CAAA;ECLA,MAAM,EDMqB,CAAC;ECL5B,OAAO,EDKuB,CAAC;ECJ/B,KAAK,EDIS,KAAK;ECHnB,MAAM,EDGe,IAAI;EACzB,UAAU,EAAE,OAAO;CACtB",
     "sources": [
         "App.scss",
-        "mixins.scss"
+        "_mixins.scss"
     ],
     "names": [],
     "file": "App.css"

@@ -5,7 +5,7 @@ import SubmitFormBtn from '../submit-form-btn/submit-form-button'
 const SignUp = () => {
   //For Form Validation 
 
-  const [firstName, setFirstName] = useState(['iu', null])
+  const [firstName, setFirstName] = useState(['', null])
   const [lastName, setLastName] = useState(['', null])
   const [userName, setUserName] = useState(['', null])
   const [email, setEmail] = useState(['', null])
@@ -18,9 +18,9 @@ const SignUp = () => {
     return clonedArr
   }
 
-  const isStill = firstName !== 'iu' ? true : false
-  const notify = state => isStill && console.log(`new state ${state} `)
-  notify(firstName)
+  // const isStill = firstName !== 'iu' ? true : false
+  // const notify = state => isStill && console.log(`new state ${state} `)
+  // notify(firstName)
 
   // const candidate = {
   //   firstName,
@@ -35,6 +35,7 @@ const SignUp = () => {
       <Fragment>
         <form className="form">
           <h1 className="form-title">Sign Up</h1>
+
           <InputMUI 
           stateValue = { firstName }
           label = 'First Name'
@@ -43,46 +44,41 @@ const SignUp = () => {
           />
 
           <InputMUI 
-          value = {lastName} 
+          stateValue = {lastName} 
           label = 'Last Name' 
-          onChange = { () => {
-            setLastName(updateArrState(lastName))} 
-          }
+          handleChange = { updateArrState } 
+          updateParentState = { setLastName }
           />
 
           <InputMUI 
-          value = {email} 
+          stateValue = {email} 
           label = 'Email' 
           type = 'email' 
-          onChange = { () => {
-            setEmail(updateArrState(email))} 
-          }
+          handleChange = { updateArrState } 
+          updateParentState = { setEmail }
           />
 
           <InputMUI 
-          value = {userName} 
+          stateValue = {userName} 
           label = 'Username' 
-          onChange = { () => {
-            setUserName(updateArrState(userName))} 
-          }
+          handleChange = { updateArrState } 
+          updateParentState = { setUserName }
           />
 
           <InputMUI 
-          value = {password} 
+          stateValue = {password} 
           label = 'Password' 
           type = 'password' 
-          onChange = { () => {
-            setPassword(updateArrState(password))} 
-          }
+          handleChange = { updateArrState } 
+          updateParentState = { setPassword }
           />
 
           <InputMUI 
-          value = {confirm} 
+          stateValue = {confirm} 
           label = 'Confirm Password' 
           type = 'password' 
-          onChange = { () => {
-            setConfirm(updateArrState(confirm))} 
-          }
+          handleChange = { updateArrState } 
+          updateParentState = { setConfirm }
           />
 
           <SubmitFormBtn buttonName = 'Sign Up' />

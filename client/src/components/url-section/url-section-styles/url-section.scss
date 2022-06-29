@@ -1,4 +1,4 @@
-@import '../../../App-styles/mixins.scss';
+@import '../../../App-styles/mixins';
 
 .shortener-wrapper{
     @include size(80%, auto, 0, 0);

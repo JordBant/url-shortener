@@ -20,10 +20,8 @@ const InputMUI = ({label, type, stateValue, handleChange, updateParentState}) =>
     autoComplete="off"
   >
     <TextField
-    stateValue = { stateValue }
     type = {type} 
     label = {label}
-    updateParentState =  { updateParentState }
     onChange = {(event) => {
       updateParentState(handleChange(stateValue, event))
     }}
