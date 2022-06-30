@@ -1,29 +1,25 @@
 import './submit-form-styles/submit-form.css'
-import { useEffect } from "react";
 
-const SubmitFormBtn = ({newUser, buttonName}) => {
+const SubmitFormBtn = ({newUserObject: user, buttonName, formType}) => {
 
-  const validateInput = (...newUserObject) =>{
-    /**
-     * - All inputs must not be empty
-     * -------------------------------- *
-     * - Email & Username must be valid and non-existing inputs 
-     * - Username & Password must contain correct characters and letter-cases
-     * - Confirm === Password must be true
-     */
-  }
+  const postSensitives = async () => {
+    try {
+      const res = await fetch(`./form/:${formType}`, {
 
-  useEffect(() => {
-    //onClick Validate Inputs
-    //If validation true, will return true & a POST will be made to server,
-    //Else, will return false and update the undefined index of input 
-    //to a boolean value. 
-    //Make a Post request to the server
-  }, [])
-  
+          method: 'POST',
+          headers: {"Content-Type" : "application/json"},
+          body: JSON.stringify({ value: user })
+
+          })
+          const formTestStatus = await res.json()
+
+        } catch (error) {
+          console.log(error)
+        }
+      }  
 
   return (
-    <button className = 'submit-form-btn' > {buttonName} </button>
+    <button onClick={ postSensitives } className = 'submit-form-btn' > {buttonName} </button>
   )
 }
 

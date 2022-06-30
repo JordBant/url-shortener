@@ -1,4 +1,4 @@
-import {Fragment, React, useState} from 'react'
+import { Fragment, React, useState } from 'react'
 import InputMUI from '../mui-input-component'
 import SubmitFormBtn from '../submit-form-btn/submit-form-button'
 
@@ -12,9 +12,20 @@ const SignUp = () => {
   const [password, setPassword] = useState(['', null])
   const [confirm, setConfirm] = useState(['', null])
 
+  const candidate = {
+    name: 'sign-up',
+    firstName,
+    lastName,
+    userName,
+    email,
+    password,
+    confirm
+  }
+
   const updateArrState = (stateArr, event) => {
     const clonedArr = [event.target.value, stateArr[1]]
-    console.log(`Here: ${clonedArr}`)
+    console.log(`Here: ${clonedArr}`, candidate)
+
     return clonedArr
   }
 
@@ -22,18 +33,9 @@ const SignUp = () => {
   // const notify = state => isStill && console.log(`new state ${state} `)
   // notify(firstName)
 
-  // const candidate = {
-  //   firstName,
-  //   lastName,
-  //   userName,
-  //   email,
-  //   password,
-  //   confirm
-  // }
-
   return (
       <Fragment>
-        <form className="form">
+        <div className="form">
           <h1 className="form-title">Sign Up</h1>
 
           <InputMUI 
@@ -81,8 +83,12 @@ const SignUp = () => {
           updateParentState = { setConfirm }
           />
 
-          <SubmitFormBtn buttonName = 'Sign Up' />
-        </form>
+          <SubmitFormBtn 
+          buttonName = 'Sign Up' 
+          newUserObject= { candidate }
+          formType = 'Create'
+          />
+        </div>
       </Fragment>
   )
 }

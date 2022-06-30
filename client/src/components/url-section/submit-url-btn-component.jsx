@@ -3,7 +3,6 @@ const SubmitUrl = ({inputValue}) => {
     const sendUrl = async() => {
         try {
             const res = await fetch('./shortener', {
-                
 
                 method: 'POST',
                 headers: {"Content-Type" : "application/json"},
