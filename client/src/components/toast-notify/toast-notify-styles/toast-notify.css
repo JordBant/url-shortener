@@ -1,0 +1,26 @@
+.Toastify__toast-container {
+  margin: 0;
+  padding: 0;
+  width: 650px;
+  height: auto;
+}
+
+.Toastify__progress-bar {
+  display: none;
+}
+
+.Toastify__toast {
+  margin: 0;
+  padding: 0 0 0 40px;
+  width: auto;
+  height: 50px;
+  border-bottom-left-radius: 100px;
+  background: #ff9500;
+}
+
+.Toastify__toast-body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25em;
+  color: white;
+}
+/*# sourceMappingURL=toast-notify.css.map */

@@ -10,7 +10,7 @@
         @include flex(space-between, center, NULL, NULL, NULL);
         justify-self: flex-start;
         border-radius: 75px;
-        border: 10px solid rgba(255, 149, 0, 0.811);
+        border: 10px solid #ff9500cf;
         z-index: 100;
 
         .submit-btn{
