@@ -4,6 +4,7 @@ import UserAuthPage from './components/routes/user-auth-page/user-auth-page-comp
 import MyToast from './components/toast-notify/toast-notify-component';
 
 const App = () => {
+
   return (
     <div className="App">
       <MyToast/>
