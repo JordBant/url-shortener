@@ -1,7 +1,7 @@
 @import '../../../App-styles/mixins';
 
 .Toastify__toast-container {
-   @include size (650px, auto, 0, 0);
+   @include size (650px, auto, 10px, 0);
 }
 
 .Toastify__progress-bar {
@@ -9,13 +9,17 @@
 }
 
 .Toastify__toast {
-   @include size (auto, 50px, 0, 0 0 0 40px);
-    border-bottom-left-radius: 100px;
-    background: #ff9500;
+   @include size (auto, 50px, 0, 0 0 0 15px);
+    border-radius: 10px 100px 10px 100px;
+    background: #ff9500dc;
 }
 
 .Toastify__toast-body {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.25em;
     color: white;
+}
+
+.Toastify__close-button {
+    display: none;
 }
