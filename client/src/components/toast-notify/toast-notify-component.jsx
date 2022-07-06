@@ -2,7 +2,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Fragment } from 'react';
 import 'react-toastify/dist/ReactToastify.css'; 
 import './toast-notify-styles/toast-notify.css'; 
-import { containerClasses } from '@mui/system';
 
 const MyToast = () => {
   const toastConfig = { 
@@ -15,7 +14,7 @@ const MyToast = () => {
 
   return (
     <Fragment>
-      <ToastContainer autoClose = {5000} limit = {1} />
+      <ToastContainer autoClose = {5000} />
       <button onClick={notify}>Notify!</button>
     </Fragment>
   );

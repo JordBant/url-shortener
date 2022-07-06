@@ -1,19 +1,25 @@
 import SignUp from './signup-component' 
 import Login from './login-component' 
-import { useTransition } from 'react-spring';
+import { Fragment } from 'react';
 
 const FormType = ({active, title, formType, activateForm}) => {
-  const isActive =  active ? 'active' : '' ;
+  const isActive = active ? 'active' : '' ;
 
-  const formToRender = () => {
-    // eslint-disable-next-line default-case
-    switch (formType) {
-      case 'Create':
-        <SignUp/>
-        break;
-      case 'Login':
-        <Login/>
-        break;
+  const formToRender = (type) => {
+    if(active){
+      switch (type) {
+        case 'SignUp':
+          return <SignUp/>
+          
+        case 'Login':
+          return <Login/>
+          
+        default:
+          console.log('Where is the form', formType)
+          break;
+      }
+    } else {
+      return ` ${title} `
     }
   }
 
@@ -23,9 +29,7 @@ const FormType = ({active, title, formType, activateForm}) => {
         onClick={() => activateForm(formType)}
       >
       {
-        active 
-        ? <SignUp/>
-        : title
+       formToRender(formType)
       }
       </div>
       )

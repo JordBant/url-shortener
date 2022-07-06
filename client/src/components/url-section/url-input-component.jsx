@@ -3,18 +3,23 @@ import './url-section-styles/url-section.css'
 import SubmitUrl from './submit-url-btn-component';
 import { React, useState } from "react";
 
-const UrlInput = () => {
+const UrlInput = ({ authorized }) => {
 
     const [text, setText] = useState('')
-    const [unAuth, setUnAuth] = useState(false)
+    const [unAuthState, setUnAuthState] = useState('')
     
-    const handleInput = (event) => setText(event.target.value)
-    
-    const unAuthorized = text ? 'unAuthorized' : ''
+    const handleInput = (event) => {
+        setText(event.target.value)
+        if(text.length === 0 && !authorized) {
+            setUnAuthState('unAuthorized') 
+        } else {
+            setUnAuthState('') ;
+        } 
+    }
    
     return (
         <div className='shortener-wrapper'>
-            <div className={`input-container ${unAuthorized} `}>
+            <div className={`input-container ${unAuthState} `}>
                 <SubmitUrl inputValue = { text } />
                 <input 
                 onChange= { handleInput }

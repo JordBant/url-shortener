@@ -12,7 +12,7 @@ const EntryPage = () => {
 
   return (
     <div className="entry-page">
-      <UrlInput/>
+      <UrlInput authorized = { authorized } onChange />
       <Particle className = "particle-background" />
     </div>
   );

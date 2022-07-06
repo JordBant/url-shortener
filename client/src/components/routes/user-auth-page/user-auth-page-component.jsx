@@ -11,13 +11,11 @@ const UserAuthPage = () => {
       case 'Login':
         setActiveCreate(false)
         setActiveLogin(true)
-        console.log('l')
         break;
 
-      case 'Create':
+      case 'SignUp':
         setActiveCreate(true)
         setActiveLogin(false)
-        console.log('c')
         break;
     
       default:
@@ -30,7 +28,7 @@ const UserAuthPage = () => {
       <div className="form-wrapper">
         <FormType
           active = { activeCreate } 
-          formType = 'Create' 
+          formType = 'SignUp' 
           activateForm = { activateForm } 
           title = 'Create Account'
         />
