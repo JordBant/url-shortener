@@ -9,8 +9,8 @@ const Login = () => {
         <h1 className="form-title">Login</h1>
         <InputMUI label = 'Username' />
         <InputMUI type = 'password' label = 'Password' />
+        <SubmitFormBtn buttonName = 'Log In' />
       </div>
-    <SubmitFormBtn buttonName = 'Log In' />
     </Fragment>
   )
 }

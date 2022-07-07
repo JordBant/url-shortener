@@ -6,21 +6,22 @@
 }
 
 .Toastify__progress-bar {
-  display: none;
+  background: white;
+  height: 1.5px;
 }
 
 .Toastify__toast {
-  margin: 0;
+  margin: 10px;
   padding: 0 0 0 15px;
   width: auto;
   height: 50px;
-  border-radius: 10px 100px 10px 100px;
+  border-radius: 10px 100px 100px 200px;
   background: #ff9500dc;
 }
 
 .Toastify__toast-body {
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.25em;
+  font-size: 1.2em;
   color: white;
 }
 

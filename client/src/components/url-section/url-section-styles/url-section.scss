@@ -56,7 +56,7 @@
         }
     }
     .input-container.unAuthorized{
-        animation: yourAnimation 0.3s ease 0s normal none;
+        animation: shake-on-error 0.3s ease 0s normal none;
     }
 
         .shortened-url-div{
@@ -68,10 +68,6 @@
         .shortened-url{
             @include size(auto, auto, 0, 0);
             background: green;
-        }
-        
-        .copy-icon{
-            background: cyan;
         }
     }
 }
@@ -87,7 +83,7 @@
     }
 }
 
-@keyframes yourAnimation {
+@keyframes shake-on-error {
     0%{
         transform: rotate(0deg);
     }

@@ -26,19 +26,25 @@ const UserAuthPage = () => {
   return (
     <div className="user-auth">
       <div className="form-wrapper">
-        <FormType
-          active = { activeCreate } 
-          formType = 'SignUp' 
-          activateForm = { activateForm } 
-          title = 'Create Account'
-        />
+        <div className="body-container">
+          <FormType
+            active = { activeCreate } 
+            formType = 'SignUp' 
+            activateForm = { activateForm } 
+            title = 'Create Account'
+          />
+        </div>
 
-        <FormType 
-          active = { activeLogin } 
-          formType = 'Login' 
-          activateForm = { activateForm } 
-          title = 'Log In'
-        />
+        <hr className="seperator" />
+
+        <div className="body-container">
+          <FormType 
+            active = { activeLogin } 
+            formType = 'Login' 
+            activateForm = { activateForm } 
+            title = 'Log In'
+          />
+        </div>
       </div>
     </div>
   )

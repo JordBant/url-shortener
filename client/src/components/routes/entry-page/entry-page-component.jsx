@@ -1,18 +1,12 @@
 import Particle from '../../Particles'
 import './entry-page-styles/entry-page.css'
 import UrlInput from '../../url-section/url-input-component'
-import { useState } from 'react'
 
-const EntryPage = () => {
-  const [authorized, setAuth] = useState(false)
-  if(!authorized){
-    //trigger toast one level up
-    //send css class a level down
-  }
-
+// Authorized and Notify are both prop-drilled into URL: fix by practicing composition
+const EntryPage = ({ authorized, notify }) => {
   return (
     <div className="entry-page">
-      <UrlInput authorized = { authorized } onChange />
+      <UrlInput authorized = { authorized } notify = {notify} />
       <Particle className = "particle-background" />
     </div>
   );

@@ -3,7 +3,7 @@ import './url-section-styles/url-section.css'
 import SubmitUrl from './submit-url-btn-component';
 import { React, useState } from "react";
 
-const UrlInput = ({ authorized }) => {
+const UrlInput = ({ authorized, notify }) => {
 
     const [text, setText] = useState('')
     const [unAuthState, setUnAuthState] = useState('')
@@ -12,6 +12,7 @@ const UrlInput = ({ authorized }) => {
         setText(event.target.value)
         if(text.length === 0 && !authorized) {
             setUnAuthState('unAuthorized') 
+            notify() //Prop-drilled: Fix with Context
         } else {
             setUnAuthState('') ;
         } 

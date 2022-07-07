@@ -101,8 +101,8 @@
 }
 
 .shortener-wrapper .input-container.unAuthorized {
-  -webkit-animation: yourAnimation 0.3s ease 0s normal none;
-          animation: yourAnimation 0.3s ease 0s normal none;
+  -webkit-animation: shake-on-error 0.3s ease 0s normal none;
+          animation: shake-on-error 0.3s ease 0s normal none;
 }
 
 .shortener-wrapper .shortened-url-div {
@@ -139,10 +139,6 @@
   background: green;
 }
 
-.shortener-wrapper .shortened-url-div .copy-icon {
-  background: cyan;
-}
-
 @-webkit-keyframes rotateShortIcon {
   from {
     -webkit-transform: rotate(0deg);
@@ -169,7 +165,7 @@
   }
 }
 
-@-webkit-keyframes yourAnimation {
+@-webkit-keyframes shake-on-error {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -196,7 +192,7 @@
   }
 }
 
-@keyframes yourAnimation {
+@keyframes shake-on-error {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
