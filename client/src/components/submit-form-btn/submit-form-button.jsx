@@ -1,6 +1,7 @@
 import './submit-form-styles/submit-form.css'
+import { useState } from 'react'
 
-const SubmitFormBtn = ({newUserObject: user, buttonName, formType}) => {
+const SubmitFormBtn = ({newUserObject: user, buttonName, uriType}) => {
 
   /**
    * 
@@ -14,7 +15,12 @@ const SubmitFormBtn = ({newUserObject: user, buttonName, formType}) => {
    * 
    */
 
-  const postSensitives = async () => {
+  const [send, setSend] = useState(false)
+  const formType = send ? uriType : ''
+
+  const postUserInfo = async (event) => {
+    event.preventDefault(event)
+    
     try {
       const res = await fetch(`./form/:${formType}`, {
 
@@ -31,7 +37,7 @@ const SubmitFormBtn = ({newUserObject: user, buttonName, formType}) => {
       }  
 
   return (
-    <button onClick={ postSensitives } className = 'submit-form-btn' > {buttonName} </button>
+    <button onClick={ postUserInfo } className = 'submit-form-btn' > {buttonName} </button>
   )
 }
 

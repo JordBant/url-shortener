@@ -13,7 +13,6 @@ const SignUp = () => {
   const [confirm, setConfirm] = useState(['', null])
 
   const candidate = {
-    name: 'sign-up',
     firstName,
     lastName,
     userName,
@@ -86,7 +85,7 @@ const SignUp = () => {
           <SubmitFormBtn 
           buttonName = 'Sign Up' 
           newUserObject= { candidate }
-          formType = 'Create'
+          uriType = 'Create'
           />
         </div>
       </Fragment>
