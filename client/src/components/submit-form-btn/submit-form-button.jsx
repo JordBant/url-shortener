@@ -18,7 +18,18 @@ const SubmitFormBtn = ({newUserObject: user, buttonName, uriType}) => {
   const [showError, setShowError] = useState(false)
   
   const checkForFullForm = (candidate) => {
-    // All values in object are not empty execute postUserInfo
+    let attendance = 0
+    const candidateArr = Object.keys(candidate).length
+
+    for (const field in candidate) {
+      const temp = candidate[field][0]
+      console.log(temp)
+      const reg = new RegExp(/\s/g)
+
+      if(temp.includes(" ")) temp.replace(/\s/g, "")
+      if(temp.length > 0) attendance++
+    }
+    console.log(attendance, candidateArr)
   }
 
   const postUserInfo = async () => {    
@@ -43,7 +54,7 @@ const SubmitFormBtn = ({newUserObject: user, buttonName, uriType}) => {
 
   return (
     <Fragment>
-      <button onClick={ checkForFullForm(user) } className = 'submit-form-btn' > {buttonName} </button>
+      <button onClick={() => checkForFullForm(user) } className = 'submit-form-btn' > {buttonName} </button>
       {showError && <small className='btn-error-message'> Please fill out the incomplete fields </small>}
     </Fragment>
   )

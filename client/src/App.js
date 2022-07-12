@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import { useState, useRef } from 'react';
-import EntryPage from './components/routes/entry-page/entry-page-component';
-import UserAuthPage from './components/routes/user-auth-page/user-auth-page-component';
+import EntryPage from './components/pages/entry-page/entry-page-component';
+import UserAuthPage from './components/pages/user-auth-page/user-auth-page-component';
 
 import 'react-toastify/dist/ReactToastify.css'; 
 import './App-styles/App.css'
