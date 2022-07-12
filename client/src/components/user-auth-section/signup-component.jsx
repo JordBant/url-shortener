@@ -23,7 +23,7 @@ const SignUp = () => {
 
   const updateArrState = (stateArr, event) => {
     const clonedArr = [event.target.value, stateArr[1]]
-    console.log(`Here: ${clonedArr}`, candidate)
+    console.log(`Here: ${clonedArr} from form `)
 
     return clonedArr
   }

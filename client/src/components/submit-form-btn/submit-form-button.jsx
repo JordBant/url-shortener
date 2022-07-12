@@ -23,11 +23,11 @@ const SubmitFormBtn = ({newUserObject: user, buttonName, uriType}) => {
 
     for (const field in candidate) {
       const temp = candidate[field][0]
-      console.log(temp)
-      const reg = new RegExp(/\s/g)
+      console.log(`"${temp}"`)
 
-      if(temp.includes(" ")) temp.replace(/\s/g, "")
+      if(/\s/.test(temp)) temp.replace(/\s/ ,"l")
       if(temp.length > 0) attendance++
+      console.log( `'${temp}'` ,/\s/.test(temp))
     }
     console.log(attendance, candidateArr)
   }
