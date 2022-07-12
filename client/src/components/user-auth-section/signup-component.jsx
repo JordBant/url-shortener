@@ -38,8 +38,8 @@ const SignUp = () => {
           <h1 className="form-title">Sign Up</h1>
 
           <InputMUI 
-          stateValue = { firstName }
           label = 'First Name'
+          stateValue = { firstName }
           handleChange = { updateArrState } 
           updateParentState = { setFirstName }
           />

@@ -1,3 +1,18 @@
+.form-error-message {
+  margin: 5px;
+  padding: auto;
+  width: 60%;
+  height: auto;
+  font-family: 'Libre Baskerville', sans-serif;
+  text-align: center;
+  font-size: 18px;
+  color: red;
+}
+
+.form-error-message:hover {
+  background: transparent;
+}
+
 .submit-form-btn {
   margin: 0;
   padding: 0;
