@@ -1,25 +1,25 @@
-const axios = require('axios')
 const nanoid = require('nanoid')
-const PORT = 3001 || process.env.PORT
+const PORT = 3001
+//  || process.env.PORT
 // const mongo = require('mongoose')
 
 const express = require('express')
 const app = express()
 app.use(express.json());
 
-app.post('/form/:type', (req, res) => {
+app.post('/form/:login', (req, res) => {
     const user = req.body.value
     const type = req.params.type
 
-    // switch (type) {
-    //     case 'Create':
-            
-    //         break;
+    switch (type) {
+        case 'create':
+            console.log('Got create')
+            break;
 
-    //     case 'Login':
-            
-    //         break;
-    // }
+        case 'login':
+            console.log('Got login')
+            break;
+    }
 
     console.log('Got Url:', url)
     res.json(user)
