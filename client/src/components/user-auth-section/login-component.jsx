@@ -41,7 +41,7 @@ const Login = () => {
         <SubmitFormBtn 
         buttonName = 'Log In' 
         newUserObject= { candidate }
-        uriType = 'Login'
+        uriType = 'login'
         />
       </div>
     </Fragment>

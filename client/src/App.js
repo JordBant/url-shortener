@@ -10,11 +10,11 @@ import MyToast from './components/toast-notify/toast-notify-component';
 const App = () => {
   // state will at some point be influenced by a browser cookie
   const [authorized, setAuthorized] = useState(false)
-  const userAuthRef = useRef()
+  // const userAuthRef = useRef()
 
-  const smoothScroll = () => {
-    !authorized && userAuthRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+  // const smoothScroll = () => {
+  //   !authorized && userAuthRef.current.scrollIntoView({ behavior: 'smooth' })
+  // }
   /**
    * 
    * Forward a ref to to the userAuth page
@@ -37,7 +37,7 @@ const App = () => {
       <MyToast/>
       <EntryPage 
         authorized = { authorized } 
-        smoothScroll = { smoothScroll }
+        // smoothScroll = { smoothScroll }
         notify = { notify } />
       <UserAuthPage/>
     </div>
