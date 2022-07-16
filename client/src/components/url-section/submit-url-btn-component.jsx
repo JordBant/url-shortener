@@ -1,8 +1,7 @@
-const SubmitUrl = ({inputValue}) => { 
-
+const SubmitUrl = ({inputValue}) => {  
     const sendUrl = async() => {
         try {
-            const res = await fetch('./shortener', {
+            const res = await fetch('./action', {
 
                 method: 'POST',
                 headers: {"Content-Type" : "application/json"},
