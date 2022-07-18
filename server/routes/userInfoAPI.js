@@ -1,4 +1,3 @@
-
 /**
  * 
  * userInfoAPI.js
@@ -10,9 +9,9 @@
 const express = require('express')
 const router = express.Router()
 
-router.post('/shortener', (req, res) => {
+router.post('/', (req, res) => {
     const url = req.body.value
-    console.log('Got Url:', url)
+    console.log('Got Url: ', url)
     res.json(url)
 })
 
