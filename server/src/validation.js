@@ -5,7 +5,8 @@
 /**
  * 
  * Check if Email matches regex expression and exists in database
- * TRUE: Set Username[true]
+ * TRUE: Check if exists in database
+ *      TRUE: Send verification to email
  * FALSE: Set Username[false]
  * 
  * Check if Username is between 3 and 20 Characters && exists

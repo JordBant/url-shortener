@@ -2,7 +2,7 @@
  * 
  * userInfoAPI.js
  * ------------------------
- * Perform CRUD actions on current user's database
+ * Perform CRUD actions on active user's database
  * 
  */
 
