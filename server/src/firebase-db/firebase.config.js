@@ -1,3 +1,5 @@
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 const admin = require("firebase-admin");
 const serviceAccount = require("./serviceAccount.json");
 
@@ -7,18 +9,15 @@ admin.initializeApp({
 
 
 const db = admin.firestore();
-const userRef = db.collection("User");
+const collectionRef = db.collection("User");
 
-const cheese = () => {
-  userRef.get().then((querySnapshot)=>{
-     querySnapshot.forEach(document => {
-      console.log(document.data())
-     })
-  })
+const addUser = async(userObj) => {
+  const docRef = collectionRef.doc('alovelace');
+  await docRef.set(userObj);
 }
 
 module.exports = {
-  cheese
+  addUser
 }
 
 // const { initializeApp } = require("firebase-admin/app");

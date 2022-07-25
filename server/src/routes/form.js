@@ -10,7 +10,7 @@
 const express = require('express')
 const router = express.Router()
 const { addUser } = require('../firebase-db/firebase.config')
-// const checkInputs = require('../validation')
+const { checkSensitiveInput, jettisonNull} = require('../validation')
 
 
 router.post('/:type',(req, res) => {
@@ -26,8 +26,10 @@ router.post('/:type',(req, res) => {
             break;
     } 
     // addUser()
-    addUser()
-    console.log('Got Url:', candidate, type)
+    const newCandidate = jettisonNull(candidate)
+    console.log('hi', newCandidate)
+    // addUser(jettisonNull(candidate))
+    // console.log('Got Url:', candidate, type)
     res.json('Signup Complete')
 })
 

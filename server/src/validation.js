@@ -29,10 +29,22 @@ const checkSensitiveInput = (username, email, password) => {
         Send email a message and await email verification
         Email will not be added into account until it has been verified
      */ 
-    if(usernameCheck) // Check if username 
-    if(passwordCheck)
+    if(usernameCheck) // Check if username exists on database
+    if(passwordCheck) // 
 
     return [emailCheck, usernameCheck, passwordCheck]
 }
 
-module.exports = checkSensitiveInput
+const jettisonNull = (userObj) => {
+    const tempMap = new Map(Object.entries(userObj))
+    for(let [key, value] of tempMap){
+        value = value[0]
+        tempMap.set(key, value)
+    };    
+    return Object.fromEntries(tempMap)
+}
+
+module.exports = {
+    checkSensitiveInput,
+    jettisonNull
+}
