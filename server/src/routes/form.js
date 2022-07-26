@@ -18,7 +18,9 @@ router.post('/:type',(req, res) => {
     const type = req.params.type
     switch (type) {
         case ':create':
-            console.log(`Got ${type}. Should be create`)
+            // check username
+            // 
+            addUser(jettisonNull(candidate))
             break;
 
         case 'login':
@@ -26,9 +28,8 @@ router.post('/:type',(req, res) => {
             break;
     } 
     // addUser()
-    const newCandidate = jettisonNull(candidate)
-    console.log('hi', newCandidate)
-    // addUser(jettisonNull(candidate))
+    // const newCandidate = jettisonNull(candidate)
+    // console.log('hi', newCandidate)
     // console.log('Got Url:', candidate, type)
     res.json('Signup Complete')
 })
