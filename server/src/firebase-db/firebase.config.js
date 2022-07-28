@@ -7,18 +7,10 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
-
 const db = admin.firestore();
 const collectionRef = db.collection("User");
 
-const addUser = async(userObj) => {
-  const docRef = collectionRef.doc('alovelace');
-  await docRef.set(userObj);
-}
-
-module.exports = {
-  addUser
-}
+module.exports = collectionRef
 
 // const { initializeApp } = require("firebase-admin/app");
 // const { getFirestore, collection } = require("firebase-admin/firestore");

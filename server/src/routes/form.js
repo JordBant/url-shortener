@@ -15,12 +15,16 @@ const { checkSensitiveInput, jettisonNull} = require('../validation')
 
 router.post('/:type',(req, res) => {
     const candidate = req.body.value
+    const {
+        userName: username,
+        email,
+        password
+    } = candidate
     const type = req.params.type
     switch (type) {
         case ':create':
             // check username
-            // 
-            addUser(jettisonNull(candidate))
+            // addUser(jettisonNull(candidate))
             break;
 
         case 'login':
@@ -31,6 +35,8 @@ router.post('/:type',(req, res) => {
     // const newCandidate = jettisonNull(candidate)
     // console.log('hi', newCandidate)
     // console.log('Got Url:', candidate, type)
+    checkSensitiveInput(username, email, password)
+    // console.log(candidate)
     res.json('Signup Complete')
 })
 
