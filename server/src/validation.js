@@ -38,6 +38,7 @@ const checkSensitiveInput = (username, email, password) => {
     // newUsername.split('').length > 3 && newUsername.split('').length < 20 && 
     console.log(usernameCheck)
     // console.log(newUsername)
+
     
     // const passwordCheck = newPassword.split('').length > 7 && newPassword.split('').length < 20 && specificCharsRegex.test(newPassword)
     // console.log(passwordCheck)
